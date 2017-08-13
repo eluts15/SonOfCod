@@ -7,10 +7,10 @@
 @using SonOfCod2.ViewModels
 
 
-<h2>Register a new user</h2>
+<h2>Register a New Account</h2>
 <hr />
 
-@using (Html.BeginForm("Register", "Account", FormMethod.Post))
+@using (Html.BeginForm("Register", "Admin", FormMethod.Post))
 {
     @Html.LabelFor(m => m.UserName)
     @Html.TextBoxFor(m => m.UserName)
