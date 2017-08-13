@@ -9,12 +9,16 @@ Navigate to Project directory and run the command:
 
 Update-Database 20170812231258_Initial -Context ApplicationDbContext
 
+This can also be done throug the Command Prompt with the following command:
+
+dotnet ef database update 20170812231258_Initial
+
 This should be enough to restore the database.
 
-## Specifcations
+## Specifications
 1. Users can Register/Sign up for an account.
 2. Users can sign in.
-3. Users can view subscribe to the newsletter with their email.
+3. Users can subscribe to the newsletter with their email.
 
 ## TODO
 
