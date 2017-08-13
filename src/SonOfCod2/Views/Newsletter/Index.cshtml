@@ -21,8 +21,8 @@
     @if (User.Identity.IsAuthenticated)
     {
         @using (Html.BeginForm("Subscribers", "Newsletter"))
-        {
-            <input type="submit" value="Current Subscribers" class="btn btn-danger" />
+        {   
+            <input type="submit" value="Current Subscribers" class="btn btn-default" />
         }
 
     }
