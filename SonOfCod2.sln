@@ -12,6 +12,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SonOfCod2", "src\SonOfCod2\SonOfCod2.xproj", "{FE0EAE43-942C-4B54-9F8E-6672CBFB9DEE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SonOfCod.Tests", "SonOfCod.Tests", "{164CE2A6-621A-4508-920A-D9BE187AA2EA}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SonOfCod.Tests", "SonOfCod.Tests\SonOfCod.Tests\SonOfCod.Tests.xproj", "{FC2FE89F-59C3-49E0-B14E-DDE00DA2F1A9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,11 +26,16 @@ Global
 		{FE0EAE43-942C-4B54-9F8E-6672CBFB9DEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE0EAE43-942C-4B54-9F8E-6672CBFB9DEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE0EAE43-942C-4B54-9F8E-6672CBFB9DEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC2FE89F-59C3-49E0-B14E-DDE00DA2F1A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC2FE89F-59C3-49E0-B14E-DDE00DA2F1A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC2FE89F-59C3-49E0-B14E-DDE00DA2F1A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC2FE89F-59C3-49E0-B14E-DDE00DA2F1A9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{FE0EAE43-942C-4B54-9F8E-6672CBFB9DEE} = {9F32545B-DFA6-4C62-B613-6569751B362B}
+		{FC2FE89F-59C3-49E0-B14E-DDE00DA2F1A9} = {164CE2A6-621A-4508-920A-D9BE187AA2EA}
 	EndGlobalSection
 EndGlobal
