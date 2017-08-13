@@ -4,6 +4,7 @@
 
 @using System.Security.Claims
 @using SonOfCod2.ViewModels
+@model LoginViewModel
 
 <br />
 
@@ -11,6 +12,31 @@
 
 <h3>Sign Below Using your Account.</h3>
 
+<div class="container">
+    @if (User.Identity.IsAuthenticated)
+    {
+        @using (Html.BeginForm("SignOut", "Admin"))
+        {
+            <input type="submit" class="btn btn-danger" value="Sign Out">
+        }
+    }
+    else
+    {
+        @using (Html.BeginForm("SignIn", "Admin", FormMethod.Post))
+        {
+            <div>
+              @Html.LabelFor(m => m.UserName)
+              @Html.TextBoxFor(m => m.UserName, new { required = "required"})
+            </div>
 
+            <br />
+            <div>
+              @Html.LabelFor(m => m.Password)
+              @Html.PasswordFor(m => m.Password, new { required = "required" })
+            </div>
 
+            <input type="submit" value="Sign In" class="btn btn-group-lg" />
 
+        }
+    }
+</div>
