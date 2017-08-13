@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Son of Cod Seafood";
+}
+
+@model SonOfCod2.Models.Subscriber
+@using System.Security.Claims
+
+<div class="container">
+    <h3>Sign up for our newsletter!</h3>
+    <hr />
+    @using (Html.BeginForm("SignUp", "Newsletter", FormMethod.Post))
+    {
+        <div>
+            @Html.LabelFor(m => m.Email)
+            @Html.TextBoxFor(m => m.Email, new { type = "email", required = "required" })
+        </div>
+        <input type="submit" value="Subscribe" class="btn btn-default" />
+    }
+    @if (User.Identity.IsAuthenticated)
+    {
+        @using (Html.BeginForm("Subscribers", "Newsletter"))
+        {
+            <input type="submit" value="Current Subscribers" class="btn btn-danger" />
+        }
+
+    }
+
+
+</div>

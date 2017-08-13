@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Son of Cod Seafood Company - Subscribers";
+}
+
+@model List<SonOfCod2.Models.Subscriber>
+
+<div class="container">
+    <h2>Subscriber List</h2>
+    @foreach (var sub in Model)
+    {
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h3>@Html.DisplayFor(m => sub.Email)</h3>
+            </div>
+        </div>
+    }
+</div>
