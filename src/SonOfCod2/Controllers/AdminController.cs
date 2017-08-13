@@ -31,11 +31,12 @@ namespace SonOfCod2.Controllers
             return View();
         }
 
+        // Admin
         [HttpPost]
         public async Task<IActionResult> Register(RegisterViewModel model)
         {
-            ApplicationUser thisUser = new ApplicationUser { UserName = model.UserName };
-            IdentityResult result = await _userManager.CreateAsync(thisUser, model.Password);
+            ApplicationUser thisUser = new ApplicationUser { UserName = model.UserName }; // Store the values of the registering user.
+            IdentityResult result = await _userManager.CreateAsync(thisUser, model.Password); //Store result of the user's UserName and Password.
             if (result.Succeeded)
             {
                 return RedirectToAction("Index");
@@ -52,7 +53,7 @@ namespace SonOfCod2.Controllers
             Microsoft.AspNetCore.Identity.SignInResult result = await _signInManager.PasswordSignInAsync(model.UserName, model.Password, isPersistent: true, lockoutOnFailure: false);
             if (result.Succeeded)
             {
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index", "Home"); //Action name, Controller name 
             }
             else
             {
@@ -63,7 +64,7 @@ namespace SonOfCod2.Controllers
         [HttpPost]
         public async Task<IActionResult> SignOut()
         {
-            await _signInManager.SignOutAsync();
+            await _signInManager.SignOutAsync(); //Wait for the user to sign out.
             return RedirectToAction("Index");
         }
 
