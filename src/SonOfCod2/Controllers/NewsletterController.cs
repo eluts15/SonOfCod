@@ -27,7 +27,7 @@ namespace SonOfCod2.Controllers
         [HttpPost]
         public IActionResult SignUp(Subscriber model)
         {
-            _db.Subscribers.Add(model);
+            _db.Subscriber.Add(model);
             _db.SaveChanges();
 
             return RedirectToAction("Index", "Home");
@@ -37,7 +37,7 @@ namespace SonOfCod2.Controllers
         [Authorize]
         public IActionResult Subscribers()
         {
-            List<Subscriber> subscribers = _db.Subscribers.ToList();
+            List<Subscriber> subscribers = _db.Subscriber.ToList();
             return View(subscribers);
         }
     }

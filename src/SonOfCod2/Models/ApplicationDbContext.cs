@@ -12,7 +12,7 @@ namespace SonOfCod2.Models
         public ApplicationDbContext()
         { }
 
-        public DbSet<Subscriber> Subscribers { get; set; }
+        public DbSet<Subscriber> Subscriber { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
